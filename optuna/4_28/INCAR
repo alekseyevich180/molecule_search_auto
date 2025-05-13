@@ -1,0 +1,57 @@
+# SGGA calc
+# Basic setup:
+ ISPIN = 2
+
+# Electronic loop controls:
+ ENCUT = 450
+ ALGO = Fast    # 
+ EDIFF = 1E-5
+ NELM = 500
+ ISMEAR = 0        
+ SIGMA = 0.050000   # eV
+
+# Mixer
+# AMIX      = 0.2
+# BMIX      = 0.00001
+# AMIX_MAG  = 0.8
+# BMIX_MAG  = 0.00001
+# GGA+U
+  LDAU      = .TRUE.
+  LDAUTYPE  = 2
+  LDAUL     = 3 -1 -1
+  LDAUU     = 7.00 0.00 0.00
+  LDAUJ     = 0.70 0.00 0.00
+  LDAUPRINT = 0
+  LMAXMIX   = 6
+
+# Relaxation control:
+ IBRION = 2    # Conjugate gradients
+ NSW = 1000
+ POTIM = 0.500000
+ ISIF = 0     
+ EDIFFG = -0.050000
+
+# NEB 
+# IMAGES = 4
+# SPRING = -5
+# LCLIMB = .TRUE.
+
+# Parallelization
+ NPAR = 24
+ LREAL = AUTO
+ NSIM = 1
+ LPLANE = .TRUE.
+
+# vdW correction
+# IVDW = 12
+
+# Properties:
+ LAECHG = .FALSE.
+ LCHARG = .FALSE.
+ LWAVE = .FALSE.
+ LELF = .FALSE.
+ LVTOT = .FALSE.
+ LVHAR = .FALSE.
+
+# Dipole correction
+# IDIPOL = 3
